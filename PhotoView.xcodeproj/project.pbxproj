@@ -1,0 +1,534 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		34117F628563DFB3256FFA7D /* Pods_PhotoView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6517A283341D1FAFC7FB293E /* Pods_PhotoView.framework */; };
+		544EAFE61D3116EC00BC9C03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544EAFE51D3116EC00BC9C03 /* AppDelegate.swift */; };
+		544EAFE81D3116EC00BC9C03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544EAFE71D3116EC00BC9C03 /* ViewController.swift */; };
+		544EAFEB1D3116EC00BC9C03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 544EAFE91D3116EC00BC9C03 /* Main.storyboard */; };
+		544EAFED1D3116EC00BC9C03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 544EAFEC1D3116EC00BC9C03 /* Assets.xcassets */; };
+		544EAFF01D3116EC00BC9C03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 544EAFEE1D3116EC00BC9C03 /* LaunchScreen.storyboard */; };
+		544EAFFB1D3116EC00BC9C03 /* PhotoViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544EAFFA1D3116EC00BC9C03 /* PhotoViewUITests.swift */; };
+		544EB0061D31248600BC9C03 /* FlickerApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544EB0051D31248600BC9C03 /* FlickerApi.swift */; };
+		544EB0081D313D6000BC9C03 /* FlickrPhotoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544EB0071D313D6000BC9C03 /* FlickrPhotoModel.swift */; };
+		544EB00D1D31541E00BC9C03 /* PhotoSearchConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544EB00C1D31541E00BC9C03 /* PhotoSearchConfigurator.swift */; };
+		544EB00F1D31542F00BC9C03 /* PhotoSearchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544EB00E1D31542F00BC9C03 /* PhotoSearchPresenter.swift */; };
+		544EB0111D31544C00BC9C03 /* PhotoSearchInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544EB0101D31544C00BC9C03 /* PhotoSearchInteractor.swift */; };
+		544EB0131D31545800BC9C03 /* PhotoSearchRooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 544EB0121D31545800BC9C03 /* PhotoSearchRooter.swift */; };
+		54ED7E941D3171D6003DDBB5 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54ED7E931D3171D6003DDBB5 /* PhotoViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		544EAFF71D3116EC00BC9C03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 544EAFDA1D3116EC00BC9C03 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 544EAFE11D3116EC00BC9C03;
+			remoteInfo = PhotoView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1D3E571D0526A722D518B739 /* Pods-PhotoView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoView.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoView/Pods-PhotoView.debug.xcconfig"; sourceTree = "<group>"; };
+		544EAFE21D3116EC00BC9C03 /* PhotoView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		544EAFE51D3116EC00BC9C03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		544EAFE71D3116EC00BC9C03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		544EAFEA1D3116EC00BC9C03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		544EAFEC1D3116EC00BC9C03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		544EAFEF1D3116EC00BC9C03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		544EAFF11D3116EC00BC9C03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		544EAFF61D3116EC00BC9C03 /* PhotoViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PhotoViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		544EAFFA1D3116EC00BC9C03 /* PhotoViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewUITests.swift; sourceTree = "<group>"; };
+		544EAFFC1D3116EC00BC9C03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		544EB0051D31248600BC9C03 /* FlickerApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickerApi.swift; sourceTree = "<group>"; };
+		544EB0071D313D6000BC9C03 /* FlickrPhotoModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrPhotoModel.swift; sourceTree = "<group>"; };
+		544EB00C1D31541E00BC9C03 /* PhotoSearchConfigurator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchConfigurator.swift; sourceTree = "<group>"; };
+		544EB00E1D31542F00BC9C03 /* PhotoSearchPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchPresenter.swift; sourceTree = "<group>"; };
+		544EB0101D31544C00BC9C03 /* PhotoSearchInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchInteractor.swift; sourceTree = "<group>"; };
+		544EB0121D31545800BC9C03 /* PhotoSearchRooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchRooter.swift; sourceTree = "<group>"; };
+		54ED7E931D3171D6003DDBB5 /* PhotoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		6517A283341D1FAFC7FB293E /* Pods_PhotoView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE753D9FA8790442496664A4 /* Pods-PhotoView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoView.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoView/Pods-PhotoView.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		544EAFDF1D3116EC00BC9C03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34117F628563DFB3256FFA7D /* Pods_PhotoView.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		544EAFF31D3116EC00BC9C03 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		50AE17F754C9CE75012616B3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1D3E571D0526A722D518B739 /* Pods-PhotoView.debug.xcconfig */,
+				CE753D9FA8790442496664A4 /* Pods-PhotoView.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		544EAFD91D3116EC00BC9C03 = {
+			isa = PBXGroup;
+			children = (
+				544EAFE41D3116EC00BC9C03 /* PhotoView */,
+				544EAFF91D3116EC00BC9C03 /* PhotoViewUITests */,
+				544EAFE31D3116EC00BC9C03 /* Products */,
+				50AE17F754C9CE75012616B3 /* Pods */,
+				5DFE948FD97BB7AB6D8CEADC /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		544EAFE31D3116EC00BC9C03 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				544EAFE21D3116EC00BC9C03 /* PhotoView.app */,
+				544EAFF61D3116EC00BC9C03 /* PhotoViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		544EAFE41D3116EC00BC9C03 /* PhotoView */ = {
+			isa = PBXGroup;
+			children = (
+				544EB00B1D3153E400BC9C03 /* Scenes */,
+				544EB00A1D3153DD00BC9C03 /* Services */,
+				544EB0091D3153D200BC9C03 /* Models */,
+				544EAFE51D3116EC00BC9C03 /* AppDelegate.swift */,
+				544EAFE91D3116EC00BC9C03 /* Main.storyboard */,
+				544EAFEC1D3116EC00BC9C03 /* Assets.xcassets */,
+				544EAFEE1D3116EC00BC9C03 /* LaunchScreen.storyboard */,
+				544EAFF11D3116EC00BC9C03 /* Info.plist */,
+			);
+			path = PhotoView;
+			sourceTree = "<group>";
+		};
+		544EAFF91D3116EC00BC9C03 /* PhotoViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				544EAFFA1D3116EC00BC9C03 /* PhotoViewUITests.swift */,
+				544EAFFC1D3116EC00BC9C03 /* Info.plist */,
+			);
+			path = PhotoViewUITests;
+			sourceTree = "<group>";
+		};
+		544EB0091D3153D200BC9C03 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				544EB0071D313D6000BC9C03 /* FlickrPhotoModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		544EB00A1D3153DD00BC9C03 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				544EB0051D31248600BC9C03 /* FlickerApi.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		544EB00B1D3153E400BC9C03 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				544EAFE71D3116EC00BC9C03 /* ViewController.swift */,
+				544EB00C1D31541E00BC9C03 /* PhotoSearchConfigurator.swift */,
+				544EB00E1D31542F00BC9C03 /* PhotoSearchPresenter.swift */,
+				544EB0101D31544C00BC9C03 /* PhotoSearchInteractor.swift */,
+				544EB0121D31545800BC9C03 /* PhotoSearchRooter.swift */,
+				54ED7E931D3171D6003DDBB5 /* PhotoViewModel.swift */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		5DFE948FD97BB7AB6D8CEADC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6517A283341D1FAFC7FB293E /* Pods_PhotoView.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		544EAFE11D3116EC00BC9C03 /* PhotoView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 544EAFFF1D3116EC00BC9C03 /* Build configuration list for PBXNativeTarget "PhotoView" */;
+			buildPhases = (
+				0E7B2CCF905F1920CF0C3E06 /* [CP] Check Pods Manifest.lock */,
+				544EAFDE1D3116EC00BC9C03 /* Sources */,
+				544EAFDF1D3116EC00BC9C03 /* Frameworks */,
+				544EAFE01D3116EC00BC9C03 /* Resources */,
+				A5ED2DD77B72A772BC889529 /* [CP] Embed Pods Frameworks */,
+				4EAFE9CDADC288EADC0A32F2 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PhotoView;
+			productName = PhotoView;
+			productReference = 544EAFE21D3116EC00BC9C03 /* PhotoView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		544EAFF51D3116EC00BC9C03 /* PhotoViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 544EB0021D3116EC00BC9C03 /* Build configuration list for PBXNativeTarget "PhotoViewUITests" */;
+			buildPhases = (
+				544EAFF21D3116EC00BC9C03 /* Sources */,
+				544EAFF31D3116EC00BC9C03 /* Frameworks */,
+				544EAFF41D3116EC00BC9C03 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				544EAFF81D3116EC00BC9C03 /* PBXTargetDependency */,
+			);
+			name = PhotoViewUITests;
+			productName = PhotoViewUITests;
+			productReference = 544EAFF61D3116EC00BC9C03 /* PhotoViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		544EAFDA1D3116EC00BC9C03 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Alper Senyurt";
+				TargetAttributes = {
+					544EAFE11D3116EC00BC9C03 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					544EAFF51D3116EC00BC9C03 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 544EAFE11D3116EC00BC9C03;
+					};
+				};
+			};
+			buildConfigurationList = 544EAFDD1D3116EC00BC9C03 /* Build configuration list for PBXProject "PhotoView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 544EAFD91D3116EC00BC9C03;
+			productRefGroup = 544EAFE31D3116EC00BC9C03 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				544EAFE11D3116EC00BC9C03 /* PhotoView */,
+				544EAFF51D3116EC00BC9C03 /* PhotoViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		544EAFE01D3116EC00BC9C03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				544EAFF01D3116EC00BC9C03 /* LaunchScreen.storyboard in Resources */,
+				544EAFED1D3116EC00BC9C03 /* Assets.xcassets in Resources */,
+				544EAFEB1D3116EC00BC9C03 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		544EAFF41D3116EC00BC9C03 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0E7B2CCF905F1920CF0C3E06 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4EAFE9CDADC288EADC0A32F2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoView/Pods-PhotoView-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A5ED2DD77B72A772BC889529 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PhotoView/Pods-PhotoView-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		544EAFDE1D3116EC00BC9C03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				544EAFE81D3116EC00BC9C03 /* ViewController.swift in Sources */,
+				544EB00D1D31541E00BC9C03 /* PhotoSearchConfigurator.swift in Sources */,
+				544EB0061D31248600BC9C03 /* FlickerApi.swift in Sources */,
+				544EB00F1D31542F00BC9C03 /* PhotoSearchPresenter.swift in Sources */,
+				54ED7E941D3171D6003DDBB5 /* PhotoViewModel.swift in Sources */,
+				544EAFE61D3116EC00BC9C03 /* AppDelegate.swift in Sources */,
+				544EB0131D31545800BC9C03 /* PhotoSearchRooter.swift in Sources */,
+				544EB0081D313D6000BC9C03 /* FlickrPhotoModel.swift in Sources */,
+				544EB0111D31544C00BC9C03 /* PhotoSearchInteractor.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		544EAFF21D3116EC00BC9C03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				544EAFFB1D3116EC00BC9C03 /* PhotoViewUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		544EAFF81D3116EC00BC9C03 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 544EAFE11D3116EC00BC9C03 /* PhotoView */;
+			targetProxy = 544EAFF71D3116EC00BC9C03 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		544EAFE91D3116EC00BC9C03 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				544EAFEA1D3116EC00BC9C03 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		544EAFEE1D3116EC00BC9C03 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				544EAFEF1D3116EC00BC9C03 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		544EAFFD1D3116EC00BC9C03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		544EAFFE1D3116EC00BC9C03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		544EB0001D3116EC00BC9C03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D3E571D0526A722D518B739 /* Pods-PhotoView.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PhotoView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alper.senyurt.PhotoView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		544EB0011D3116EC00BC9C03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE753D9FA8790442496664A4 /* Pods-PhotoView.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PhotoView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alper.senyurt.PhotoView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		544EB0031D3116EC00BC9C03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PhotoViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alper.senyurt.PhotoViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PhotoView;
+			};
+			name = Debug;
+		};
+		544EB0041D3116EC00BC9C03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PhotoViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alper.senyurt.PhotoViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PhotoView;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		544EAFDD1D3116EC00BC9C03 /* Build configuration list for PBXProject "PhotoView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				544EAFFD1D3116EC00BC9C03 /* Debug */,
+				544EAFFE1D3116EC00BC9C03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		544EAFFF1D3116EC00BC9C03 /* Build configuration list for PBXNativeTarget "PhotoView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				544EB0001D3116EC00BC9C03 /* Debug */,
+				544EB0011D3116EC00BC9C03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		544EB0021D3116EC00BC9C03 /* Build configuration list for PBXNativeTarget "PhotoViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				544EB0031D3116EC00BC9C03 /* Debug */,
+				544EB0041D3116EC00BC9C03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 544EAFDA1D3116EC00BC9C03 /* Project object */;
+}
