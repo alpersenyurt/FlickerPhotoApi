@@ -30,7 +30,7 @@ class PhotoSearchConfigurator
     
     // MARK: Configuration
     
-    func configure(viewController: ViewController)
+    func configure(viewController: PhotoViewController)
     {
         
         let APIDataManager:FlickrPhotoSearchProtocol = FlickrProvider()

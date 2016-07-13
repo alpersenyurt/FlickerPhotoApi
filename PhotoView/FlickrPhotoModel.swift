@@ -25,7 +25,7 @@ struct FlickrPhotoModel {
         return self.flickrImageURL("b")
     }
 
-    func flickrImageURL(size:String = "m") -> NSURL {
+    private func flickrImageURL(size:String = "m") -> NSURL {
         return NSURL(string: "http://farm\(farm).staticflickr.com/\(server)/\(photoId)_\(secret)_\(size).jpg")!
     }
 

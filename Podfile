@@ -5,6 +5,6 @@ use_frameworks!
 target "PhotoView" do
 
 pod 'Moya'
-
+pod 'SDWebImage'
 end
 

@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PhotoView/ViewController.swift"
-            timestampString = "489788493.831813"
+            filePath = "PhotoView/PhotoSearchPresenter.swift"
+            timestampString = "489788582.71392"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "31"
-            endingLineNumber = "31"
-            landmarkName = "awakeFromNib()"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "fetchPhotos(_:page:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PhotoView/ViewController.swift"
-            timestampString = "489788495.081574"
+            filePath = "PhotoView/PhotoViewController.swift"
+            timestampString = "490136771.677972"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -41,13 +41,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PhotoView/PhotoSearchPresenter.swift"
-            timestampString = "489788582.71392"
+            filePath = "PhotoView/PhotoViewController.swift"
+            timestampString = "490136771.677972"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "23"
-            endingLineNumber = "23"
-            landmarkName = "fetchPhotos(_:)"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,12 +57,92 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PhotoView/ViewController.swift"
-            timestampString = "489788981.27483"
+            filePath = "PhotoView/PhotoViewController.swift"
+            timestampString = "490136771.677972"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "collectionView(_:cellForItemAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoView/FlickerApi.swift"
+            timestampString = "490134268.109455"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "fetchPhotosForSearchText(_:page:onCompletion:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoView/PhotoViewController.swift"
+            timestampString = "490136815.793129"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoView/PhotoViewController.swift"
+            timestampString = "490136818.559164"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "collectionView(_:cellForItemAtIndexPath:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoView/PhotoViewController.swift"
+            timestampString = "490136822.690144"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "55"
             endingLineNumber = "55"
+            landmarkName = "displayFetchedPhotos(_:totalPages:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoView/PhotoViewController.swift"
+            timestampString = "490136829.767515"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
             landmarkName = "performSearchWithText(_:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -73,13 +153,125 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "PhotoView/ViewController.swift"
-            timestampString = "489789611.02899"
+            filePath = "PhotoView/PhotoSearchPresenter.swift"
+            timestampString = "490136872.324845"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "providedPhotos(_:totalPages:)"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoView/FlickerApi.swift"
+            timestampString = "490136940.565472"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "fetchPhotosForSearchText(_:page:onCompletion:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PhotoView.FlickrProvider.(fetchPhotosForSearchText (Swift.String, page : Swift.Int, onCompletion : (Swift.Optional&lt;__ObjC.NSError&gt;, Swift.Int, Swift.Optional&lt;Swift.Array&lt;PhotoView.FlickrPhotoModel&gt;&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "PhotoView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alpersenyurt/Desktop/PhotoView/FlickerPhotoApi/PhotoView/FlickerApi.swift"
+                  timestampString = "490136973.464938"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "1695">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PhotoView.FlickrProvider.(fetchPhotosForSearchText (Swift.String, page : Swift.Int, onCompletion : (Swift.Optional&lt;__ObjC.NSError&gt;, Swift.Int, Swift.Optional&lt;Swift.Array&lt;PhotoView.FlickrPhotoModel&gt;&gt;) -&gt; ()) -&gt; ()).(closure #1)"
+                  moduleName = "PhotoView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alpersenyurt/Desktop/PhotoView/FlickerPhotoApi/PhotoView/FlickerApi.swift"
+                  timestampString = "490136973.465177"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "2067">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoView/PhotoSearchInteractor.swift"
+            timestampString = "490137062.398596"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "fetchAllPhotosFromApi(_:page:)"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PhotoView.PhotoSearchInteractor.(fetchAllPhotosFromApi (Swift.String, page : Swift.Int) -&gt; ()).(closure #1)"
+                  moduleName = "PhotoView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alpersenyurt/Desktop/PhotoView/FlickerPhotoApi/PhotoView/PhotoSearchInteractor.swift"
+                  timestampString = "490137487.245907"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "39">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PhotoView.PhotoSearchInteractor.(fetchAllPhotosFromApi (Swift.String, page : Swift.Int) -&gt; ()).(closure #1)"
+                  moduleName = "PhotoView"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alpersenyurt/Desktop/PhotoView/FlickerPhotoApi/PhotoView/PhotoSearchInteractor.swift"
+                  timestampString = "490137487.246086"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "32"
+                  endingLineNumber = "32"
+                  offsetFromSymbolStart = "89">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PhotoView/FlickerApi.swift"
+            timestampString = "490137338.659695"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
+            landmarkName = "fetchPhotosForSearchText(_:page:onCompletion:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

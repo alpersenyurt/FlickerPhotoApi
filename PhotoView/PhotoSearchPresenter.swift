@@ -19,15 +19,15 @@ class PhotoSearchPresenter:PhotoSearchPresenterInput{
      var interactor: PhotoSearchInteractorInput!
      var rooter: PhotoSearchRooterInput!
 
-    func fetchPhotos(searchTerma: String){
+    func fetchPhotos(searchTerma: String,page:NSInteger){
     
-        self.interactor.fetchAllPhotosFromApi(searchTerma)
+        self.interactor.fetchAllPhotosFromApi(searchTerma,page: page)
     }
 
-    func providedPhotos(photos:[FlickrPhotoModel]){
+    func providedPhotos(photos:[FlickrPhotoModel],totalPages:NSInteger){
     
     
-        self.view.displayFetchedPhotos(photos)
+        self.view.displayFetchedPhotos(photos,totalPages: totalPages)
     }
 
 }
