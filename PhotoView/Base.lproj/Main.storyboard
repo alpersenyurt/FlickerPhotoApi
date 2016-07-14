@@ -89,11 +89,70 @@
                     <navigationItem key="navigationItem" id="hqD-UO-hoV"/>
                     <connections>
                         <outlet property="photoCollectionView" destination="I3b-Sa-DyQ" id="AMk-XF-EdQ"/>
+                        <segue destination="b77-n0-LrJ" kind="push" identifier="ShowPhotoDetail" id="rXC-MF-Rm1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="694" y="274"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="7kO-x2-f4n">
+            <objects>
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="b77-n0-LrJ" customClass="PhotoDetailViewController" customModule="PhotoView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="XKt-2l-pOb"/>
+                        <viewControllerLayoutGuide type="bottom" id="yCf-S3-OVP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gb3-V6-RyD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eq6-lk-hFZ">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9l9-gq-otW">
+                                <rect key="frame" x="0.0" y="458" width="320" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EZI-0F-ODw">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="110"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="28"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.75" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="EZI-0F-ODw" firstAttribute="top" secondItem="9l9-gq-otW" secondAttribute="top" id="Ca9-JN-C0T"/>
+                                    <constraint firstAttribute="trailing" secondItem="EZI-0F-ODw" secondAttribute="trailing" id="TIU-0B-MH6"/>
+                                    <constraint firstAttribute="height" constant="110" id="jHm-tS-Lls"/>
+                                    <constraint firstAttribute="bottom" secondItem="EZI-0F-ODw" secondAttribute="bottom" id="vmF-wh-zC6"/>
+                                    <constraint firstItem="EZI-0F-ODw" firstAttribute="leading" secondItem="9l9-gq-otW" secondAttribute="leading" id="wWF-Mk-E6o"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="eq6-lk-hFZ" firstAttribute="top" secondItem="gb3-V6-RyD" secondAttribute="top" id="9Vr-R8-9Di"/>
+                            <constraint firstItem="yCf-S3-OVP" firstAttribute="top" secondItem="eq6-lk-hFZ" secondAttribute="bottom" id="aLo-UV-f7Q"/>
+                            <constraint firstItem="9l9-gq-otW" firstAttribute="leading" secondItem="gb3-V6-RyD" secondAttribute="leading" id="bx2-6q-gwZ"/>
+                            <constraint firstAttribute="trailing" secondItem="9l9-gq-otW" secondAttribute="trailing" id="emT-ak-jfv"/>
+                            <constraint firstItem="yCf-S3-OVP" firstAttribute="top" secondItem="9l9-gq-otW" secondAttribute="bottom" id="htm-mB-MEG"/>
+                            <constraint firstItem="eq6-lk-hFZ" firstAttribute="leading" secondItem="gb3-V6-RyD" secondAttribute="leading" id="iIx-EO-YgA"/>
+                            <constraint firstAttribute="trailing" secondItem="eq6-lk-hFZ" secondAttribute="trailing" id="lVn-95-4EJ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="auu-uB-wMo"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="photoImageView" destination="eq6-lk-hFZ" id="DjZ-hx-yzu"/>
+                        <outlet property="photoTitleLabel" destination="EZI-0F-ODw" id="1bb-Cx-wwK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KiD-TU-UtS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1125" y="274"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LmE-QF-sR5">

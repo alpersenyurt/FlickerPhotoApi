@@ -36,6 +36,7 @@ class PhotoSearchConfigurator
         let APIDataManager:FlickrPhotoSearchProtocol = FlickrProvider()
         let interactor = PhotoSearchInteractor()
         let router = PhotoSearchRooter()
+        router.viewController = viewController
         let presenter = PhotoSearchPresenter()
         viewController.presenter = presenter
         presenter.view = viewController

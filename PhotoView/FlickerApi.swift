@@ -7,14 +7,23 @@
 //
 
 import Foundation
+import SDWebImage
 
 protocol FlickrPhotoSearchProtocol:class {
     
 
     func fetchPhotosForSearchText(searchText: String,page:NSInteger, onCompletion: (NSError?, NSInteger,[FlickrPhotoModel]?) -> Void) -> Void
+    
+
 
 }
-class FlickrProvider:FlickrPhotoSearchProtocol {
+
+protocol FlickrPhotoLoadImageProtocol:class {
+    
+    func loadUImageFromUrl(url:NSURL,onCompletion:(UIImage?,NSError?) -> Void);
+
+}
+class FlickrProvider:FlickrPhotoSearchProtocol , FlickrPhotoLoadImageProtocol{
 
     struct Errors {
         static let invalidAccessErrorCode = 100
@@ -102,5 +111,17 @@ class FlickrProvider:FlickrPhotoSearchProtocol {
         searchTask.resume()
     }
     
+    
+    func loadUImageFromUrl(url:NSURL,onCompletion:(UIImage?,NSError?) -> Void){
+        
+        
+        SDWebImageManager.sharedManager().downloadImageWithURL(url, options: SDWebImageOptions.CacheMemoryOnly, progress: nil) { (downloadedImage:UIImage!, error:NSError!, cacheType:SDImageCacheType, isDownloaded:Bool, withURL:NSURL!) -> Void in
+            
+            onCompletion(downloadedImage, error)
+            
+        }
+        
+        
+    }
     
 }

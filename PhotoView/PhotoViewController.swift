@@ -18,6 +18,9 @@ protocol PhotoViewControllerInput:class
 protocol PhotoViewControllerOutput
 {
     func fetchPhotos(searchTerma: String,page:NSInteger)
+    func gotoProductDetailScreen()
+    func passDataToNextScene(segue: UIStoryboardSegue)
+
 }
 
 
@@ -25,7 +28,7 @@ protocol PhotoViewControllerOutput
 class PhotoViewController: UIViewController,PhotoViewControllerInput {
     
     var presenter: PhotoViewControllerOutput!
-    
+
     var photos: [FlickrPhotoModel] = []
     var currentPage:NSInteger  = 1
     var totalPages:NSInteger = 1
@@ -50,6 +53,9 @@ class PhotoViewController: UIViewController,PhotoViewControllerInput {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    override func viewWillDisappear(animated: Bool) {
+        self.title = ""
+    }
     
     func displayFetchedPhotos(photos: [FlickrPhotoModel],totalPages:NSInteger){
     
@@ -69,6 +75,10 @@ class PhotoViewController: UIViewController,PhotoViewControllerInput {
         self.presenter.fetchPhotos(searchText,page: self.currentPage)
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        self.presenter.passDataToNextScene(segue)
+    }
     
 }
 
@@ -136,6 +146,7 @@ extension PhotoViewController : UICollectionViewDataSource {
         
     }
 
+    
 }
 
 
@@ -146,6 +157,7 @@ extension PhotoViewController : UICollectionViewDelegate {
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
 
+        self.presenter.gotoProductDetailScreen()
     }
     
 }
@@ -156,7 +168,7 @@ extension PhotoViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
     {
         var itemSize : CGSize
-        let length = (UIScreen.mainScreen().bounds.width)/3
+        let length = (UIScreen.mainScreen().bounds.width)/3-1
 
         
         if indexPath.row < self.photos.count {
@@ -176,19 +188,15 @@ extension PhotoViewController: UICollectionViewDelegateFlowLayout {
     }
 
 
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets{
-        
-        return UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)
     
-    }
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat{
         
-        return 0
+        return 0.5
     
     }
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat{
     
-        return 0
+        return 0.5
     }
     
 }
