@@ -34,23 +34,35 @@ class PhotoDetailViewController: UIViewController,PhotoDetailViewControllerInput
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.navigationController?.presentTransparentNavigationBar()
+        //ask title and image from presenter
         self.presenter.getPhotoImageTitle()
         self.presenter.loadLargePhotoImage()
+
     }
     override func awakeFromNib()
     {
         
         super.awakeFromNib()
         PhotoDetailConfigurator.sharedInstance.configure(self)
+
     }
 
+    
+    /**
+     result comes from presenter
+     
+     - parameter photo: image
+     */
     func addLargeLoadedPhoto(photo:UIImage){
     
         self.photoImageView.image = photo
     }
 
-    
+    /**
+     result comes from presenter
+     
+     - parameter title: photo title
+     */
     
     func addPhotoImageTitle(title:String){
     
@@ -59,4 +71,12 @@ class PhotoDetailViewController: UIViewController,PhotoDetailViewControllerInput
     }
 
 
+    override func viewWillDisappear(animated: Bool) {
+        
+        super.viewWillDisappear(animated)
+        self.navigationController?.hideTransparentNavigationBar()
+        
+    }
+    
+    
 }

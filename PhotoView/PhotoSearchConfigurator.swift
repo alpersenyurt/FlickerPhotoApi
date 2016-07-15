@@ -30,6 +30,11 @@ class PhotoSearchConfigurator
     
     // MARK: Configuration
     
+    /**
+     All presenter modules  are created
+     
+     - parameter viewController: view Controller for Module
+     */
     func configure(viewController: PhotoViewController)
     {
         

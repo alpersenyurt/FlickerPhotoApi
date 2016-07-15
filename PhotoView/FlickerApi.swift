@@ -33,11 +33,8 @@ class FlickrProvider:FlickrPhotoSearchProtocol , FlickrPhotoLoadImageProtocol{
         static let APIDomain = "FlickrAPIDomain"
         static let APIKey = "1c83f8b8d6c88c440ee1e8fc58c0ee08"
         
-//        static let TagsSearchFormat = "https://api.flickr.com/services/rest/?format=json&nojsoncallback=?&method=flickr.photos.search&tags=%@&extras=description,owner_name,url_s,url_l,url_o&api_key=%@&page=%d"
-     
         static let TagsSearchFormat = "https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=%@&tags=%@&page=%i&format=json&nojsoncallback=1"
  
-        static let TagsAndGeoSearchFormat = "https://api.flickr.com/services/rest/?format=json&nojsoncallback=?&method=flickr.photos.search&tags=%@&extras=description,owner_name,url_s,url_l,url_o,geo&has_geo=1&api_key=%@&page=%d&lat=%f&long=%f"
     }
     
     struct FlickerAPIMetadataKeys {
@@ -111,7 +108,12 @@ class FlickrProvider:FlickrPhotoSearchProtocol , FlickrPhotoLoadImageProtocol{
         searchTask.resume()
     }
     
-    
+    /**
+     Memory Cache Photo Service
+     
+     - parameter url:          photo Url
+     - parameter onCompletion: result
+     */
     func loadUImageFromUrl(url:NSURL,onCompletion:(UIImage?,NSError?) -> Void){
         
         

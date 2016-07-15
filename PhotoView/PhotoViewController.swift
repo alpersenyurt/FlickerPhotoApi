@@ -13,6 +13,11 @@ import SDWebImage
 protocol PhotoViewControllerInput:class
 {
     func displayFetchedPhotos(photos: [FlickrPhotoModel],totalPages:NSInteger)
+    func showWaitingView()
+    func hideWaitingView()
+    func displayErrorView(errorMessage:String);
+    func getTotalPhotoCount()->NSInteger;
+
 }
 
 protocol PhotoViewControllerOutput
@@ -41,22 +46,37 @@ class PhotoViewController: UIViewController,PhotoViewControllerInput {
         super.awakeFromNib()
         PhotoSearchConfigurator.sharedInstance.configure(self)
     }
+   
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        self.performSearchWithText("car")
-        self.photoCollectionView.reloadData()
+        self.performSearchWithText(photoSearchKey)
+
     }
     
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(animated: Bool) {
+    
+        self.title = photoSearchKey
+
     }
+
     override func viewWillDisappear(animated: Bool) {
         self.title = ""
+    
+        self.navigationController?.presentTransparentNavigationBar()
     }
     
+    
+    
+    /**
+     
+     Service Result
+     
+     Presenter return us with photo results
+     
+     - parameter photos:     all photos
+     - parameter totalPages: total Pages
+     */
     func displayFetchedPhotos(photos: [FlickrPhotoModel],totalPages:NSInteger){
     
         self.photos.appendContentsOf(photos)
@@ -70,6 +90,12 @@ class PhotoViewController: UIViewController,PhotoViewControllerInput {
 
     }
     
+    
+    /**
+     request photo servise result from Presenter
+     
+     - parameter searchText: search term
+     */
     private func performSearchWithText(searchText: String){
         
         self.presenter.fetchPhotos(searchText,page: self.currentPage)
@@ -80,6 +106,49 @@ class PhotoViewController: UIViewController,PhotoViewControllerInput {
         self.presenter.passDataToNextScene(segue)
     }
     
+  
+    
+    func getTotalPhotoCount()->NSInteger{
+    
+        return self.photos.count
+    }
+    
+    
+    // MARK: ActivityView
+    func showWaitingView(){
+    
+        let alert = UIAlertController(title: nil, message: waitingKey, preferredStyle: .Alert)
+        
+        alert.view.tintColor = UIColor.blackColor()
+        let loadingIndicator: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(10, 5, 50, 50)) as UIActivityIndicatorView
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        loadingIndicator.startAnimating();
+        
+        alert.view.addSubview(loadingIndicator)
+        self.navigationController?.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    
+    func hideWaitingView(){
+    
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    // Show Error Messages
+    func displayErrorView(errorMessage:String){
+        
+        let refreshAlert = UIAlertController(title: errorTitle, message: errorMessage , preferredStyle: UIAlertControllerStyle.Alert)
+        
+        refreshAlert.addAction(UIAlertAction(title:okKey , style: .Default, handler: { (action: UIAlertAction!) in
+            refreshAlert .dismissViewControllerAnimated(true, completion: nil)
+        }))
+        
+        presentViewController(refreshAlert, animated: true, completion: nil)
+        
+    }
+    
+
 }
 
 // MARK:- UICollectionView DataSource
@@ -110,7 +179,7 @@ extension PhotoViewController : UICollectionViewDataSource {
         else {
             self.currentPage += 1 ;
 
-            self.performSearchWithText("car")
+            self.performSearchWithText(photoSearchKey)
 
             return self.loadingItemCellCollectionView(collectionView, cellForItemAtIndexPath: indexPath);
         }

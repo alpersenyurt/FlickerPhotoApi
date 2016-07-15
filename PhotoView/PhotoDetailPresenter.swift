@@ -24,19 +24,32 @@ class PhotoDetailPresenter:PhotoDetailPresenterInput{
     
         self.interactor.loadUIImageFromUrl()
     }
-    
+  
+    /**
+     Passing data from PhotoSearch Module Rooter
+     
+     - parameter photoModel: photoModel from before viewcontroller
+     */
     func saveSelectedPhotoModel(photoModel:FlickrPhotoModel){
     
         self.interactor.configurePhotoModel(photoModel)
     }
 
-  
+    /**
+     result comes from Interactor
+     
+     - parameter image: photo Image
+     */
 
     func sendloadedPhotoImage(image:UIImage){
     
         self.view.addLargeLoadedPhoto(image)
     }
 
+
+    /**
+     result comes from interactor
+     */
     func getPhotoImageTitle(){
     
     

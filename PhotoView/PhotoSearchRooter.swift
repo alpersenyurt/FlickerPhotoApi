@@ -50,7 +50,11 @@ class PhotoSearchRooter:PhotoSearchRooterInput{
     }
     
     
-    
+    /**
+     navigate to another module
+     
+     - parameter segue: segue
+     */
     func passDataToShowPhotoDetailScene(segue: UIStoryboardSegue)
     {
         if let selectedIndexPath = viewController.photoCollectionView.indexPathsForSelectedItems()?.first {

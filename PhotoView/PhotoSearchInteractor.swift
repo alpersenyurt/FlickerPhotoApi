@@ -17,13 +17,17 @@ protocol PhotoSearchInteractorOutput: class
 {
  
     func providedPhotos(photos:[FlickrPhotoModel],totalPages:NSInteger)
+    func serviceError(error:NSError)
 
 }
+
 class PhotoSearchInteractor:PhotoSearchInteractorInput{
 
     weak var presenter: PhotoSearchInteractorOutput!
     var APIDataManager: FlickrPhotoSearchProtocol!
 
+    
+    
     func fetchAllPhotosFromApi(searchTag:String,page:NSInteger){
     
         self.APIDataManager.fetchPhotosForSearchText(searchTag,page: page) { (error:NSError?,totalPages:NSInteger,flickerPhotos:[FlickrPhotoModel]?) in
@@ -32,6 +36,10 @@ class PhotoSearchInteractor:PhotoSearchInteractorInput{
             if let photos = flickerPhotos{
             
                 self.presenter.providedPhotos(photos,totalPages:totalPages )
+           
+            }else if let error = error {
+            
+                self.presenter.serviceError(error)
             }
         }
     }

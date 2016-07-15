@@ -4,7 +4,6 @@ platform :ios, "8.0"
 use_frameworks!
 target "PhotoView" do
 
-pod 'Moya'
 pod 'SDWebImage'
 end
 
